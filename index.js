@@ -2,7 +2,7 @@ const formatDate = (timeInSeconds = 0) => {
     
   let hours = Math.floor(timeInSeconds/3600);  
   let minutes = Math.floor((timeInSeconds % 3600)/60);
-  let seconds = timeInSeconds % 60;
+  let seconds = Math.round(timeInSeconds % 60);
 
   if (hours === 0 && minutes === 0) {
       return seconds + 's';
